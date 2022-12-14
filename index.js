@@ -25,5 +25,3 @@ app.use('/customer',customerRouter)
 app.listen(PORT,()=>{
 console.log(`app is listening at port ${PORT}`);
 })
-
-module.exports=app;
