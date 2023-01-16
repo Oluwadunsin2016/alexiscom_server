@@ -1,6 +1,6 @@
 const customerModel = require("../Models/customerModel");
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const { sendMail } = require("../Mail");
 
 const register = (req, res) => {
@@ -41,7 +41,7 @@ const logIn = (req, res) => {
       if (!user) {
         res.send({ message: "Email doesn't exist" });
       } else {
-        const validPassword = await bcrypt.compare(password, user.password);
+        const validPassword = bcrypt.compare(password, user.password);
         if (validPassword) {
           const token = jwt.sign({ _id: user._id }, "secret");
           res.send({ message: "Logged In Successfully", token, status: true });
