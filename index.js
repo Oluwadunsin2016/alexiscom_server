@@ -20,7 +20,7 @@ console.log('Mongoose connected successfully');
 app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
-app.use('/customer',customerRouter)
+app.use('/',customerRouter)
 
 app.listen(PORT,()=>{
 console.log(`app is listening at port ${PORT}`);
