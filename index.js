@@ -17,10 +17,6 @@ console.log('Mongoose connected successfully');
 }
 })
 
-app.get("/", (req,res)=>{
-res.json({name:'Oluwagbemiga', age:22,gender:"Male"})
-})
-
 app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))

@@ -77,8 +77,5 @@ console.log(req.body);
 const details=req.body
 sendMail(details)
 }
-const test=(req,res)=>{
-res.send("I am working")
-}
 
-module.exports = { register, logIn, fetchData,handleMail,test };
+module.exports = { register, logIn, fetchData,handleMail };
