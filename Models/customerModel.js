@@ -6,6 +6,8 @@ const customerSchema = mongoose.Schema({
   lastname: String,
   email: String,
   password: String,
+  isAdmin: { type: Boolean, default: false },
+  wishlist: [{ type: mongoose.Schema.Types.ObjectId, ref: "Product" }]
 });
 
 const saltRound = 10;
