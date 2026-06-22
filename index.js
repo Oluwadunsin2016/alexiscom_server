@@ -25,6 +25,10 @@ console.log('Mongoose connected successfully');
 }
 })
 
+app.get('/',(req,res)=>{
+res.send('Welcome to Alexiscom server...')
+});
+
 
 app.use(cors())
 app.use(bodyParser.json())
